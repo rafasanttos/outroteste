@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+    
+}
+
+.menu-mobile{
+    display: none;
+}
+footer{
+    width: 100vw;
+    height: 30vh;
+    /* padding: 71px 48px; */
+    background-color: #ac0606;
+}
+ul {
+    display: flex;
+    gap: 50px;
+}
+.itens-rodape{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+.titulos-rodape{
+    margin-top: 20px;
+}
+.cabecalho{
+    background-color: #b90101;
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    
+}
+
+.texto-cabecalho{
+    color: #fff;
+    position: absolute;
+    margin-top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.icones-cabecalho{
+    color: white;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+.logo img{
+    width: 150px;
+}
+.slider{
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+    
+}
+.slides input{
+    display:none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 1s ease-out;
+}
+.slide img{
+    width: 800px;
+    height: 400px;
+    
+}
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #111010;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual-btn:hover{
+    background-color: red;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 385px;
+    display: flex;
+    justify-content: center;
+    
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 30px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: red;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: red;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: red;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+.passeios{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    position: relative;
+    top: 100px;
+    
+    
+    
+
+}
+
+.passeio{
+    border-radius: 20px;
+    width: 15%;
+    height: 40vh;
+    background-color: rgb(44, 195, 41);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 3px 4px 1px  grey;
+
+}
+.passeio:hover{
+    border: solid 1px red;
+}
+.passeio button{
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform:translate(-50%);
+    cursor: pointer;
+}
+.passeio img{
+    width: 220px;
+    height: 200px;
+    position: relative;
+}
+.texto-passeios h2{
+    color: green;
+    position: relative;
+    top: 25%;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+@media (width<=576px){
+    .slider{
+        width: 350px;
+        height: 200px;
+    }
+    .slide img{
+        width: 350px;
+        height: 200px;
+    }
+    .navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 180px;
+    margin-left:-62%;    
+    display: flex;
+    justify-content: center;
+    }
+    .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -220px;
+        margin-left: -62%;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    .cabecalho{
+        display: block;
+    }
+    .logo{
+        position: relative;
+        top: 20%;
+        left: -30px;
+    }
+    .texto-cabecalho{
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .nav-bar ul,.icones-cabecalho{
+        display: none;
+    }
+    .passeios{
+        width: 500px;
+        height: 350px;
+        margin: 0 auto;
+        display: flex;
+        
+        justify-content: end;
+        gap: 12px;
+        position: relative;
+        top: 150px;
+        overflow: hidden;
+        overflow-x: scroll;
+        
+        border: solid 2px red;
+        
+        
+        
+        
+    
+    }
+    .texto-passeios{
+        font-size: 8px;
+    }
+   
+    .passeio{
+        
+        border-radius: 10px;
+        width:300%;
+        height: 320px;
+        background-color: rgb(178, 25, 63);
+        
+        
+    }
+
+    .passeio img{
+        width: 100%;
+        height: 200px;
+        
+        
+    }
+}
